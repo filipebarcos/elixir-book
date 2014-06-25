@@ -9,4 +9,7 @@ function_3 = fn
   (n) -> function_2.(rem(n,3), rem(n, 5), n)
 end
 
-10..16 |> Enum.each &IO.puts(function_3.(&1))
+# 10..16 |> Enum.each &IO.puts(function_3.(&1))
+Enum.each 10..16, fn (num) ->
+  IO.puts function_3.(num)
+end
